@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конвертер</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+    <div id="app">
+        <h1>Конвертер валют</h1>
+        <form>
+            <div id="container">
+
+                <div class="page" id="left-page">    
+                    <div class="base-valute">
+                        <label for="base-valute-name">Базовая валюта:</label>
+                        <select id="base-valute-select" class="form-control">                         
+                            <option value="USD">USD — Доллар США</option>
+                            <option value="EUR">EUR — Евро</option>
+                            <option value="GBP">GPB — Фунт стерлингов</option>
+                            <option value="JPY">JPY — Японские иены</option>
+                            <option value="CNY">CNY — Китайские юани</option>
+                            <option value="PLN">PLN — Польские злотые</option>
+                            <option value="BYN">BYN — Белорусские рубли</option>
+                            <option value="UAH">UAH — Украинские гривны</option>
+                            <option value="RUB">RUB — Российские рубли</option>
+                        </select>
+                    </div>         
+                    
+                    <div class="rates">
+                        <div class="rate-item">
+                            <div class="rate-item-title">Курс USD</div>
+                            <div class="rate-item-value" data-value="USD">--.--</div>
+                            <div class="rate-item-footer">Доллар США</div>
+                        </div>
+                        <div class="rate-item">
+                            <div class="rate-item-title">Курс EUR</div>
+                            <div class="rate-item-value" data-value="EUR">--.--</div>
+                            <div class="rate-item-footer">Евро</div>
+                        </div>
+                        <div class="rate-item">
+                            <div class="rate-item-title">Курс GPB</div>
+                            <div class="rate-item-value" data-value="GBP">--.--</div>
+                            <div class="rate-item-footer">Фунт стерлингов</div>
+                        </div>
+                        <div class="rate-item">
+                            <div class="rate-item-title">Курс JPY</div>
+                            <div class="rate-item-value" data-value="JPY">--.--</div>
+                            <div class="rate-item-footer">Японские иены</div>
+                        </div>
+                        <div class="rate-item">
+                            <div class="rate-item-title">Курс CNY</div>
+                            <div class="rate-item-value" data-value="CNY">--.--</div>
+                            <div class="rate-item-footer">Китайские юани</div>
+                        </div>
+                        <div class="rate-item">
+                            <div class="rate-item-title">Курс PLN</div>
+                            <div class="rate-item-value" data-value="PLN">--.--</div>
+                            <div class="rate-item-footer">Польские злотые</div>
+                        </div>
+                        <div class="rate-item">
+                            <div class="rate-item-title">Курс BYN</div>
+                            <div class="rate-item-value" data-value="BYN">--.--</div>
+                            <div class="rate-item-footer">Белорусские рубли</div>
+                        </div>
+                        <div class="rate-item">
+                            <div class="rate-item-title">Курс UAH</div>
+                            <div class="rate-item-value" data-value="UAH">--.--</div>
+                            <div class="rate-item-footer">Украинские гривны</div>
+                        </div>
+                        <div class="rate-item">
+                            <div class="rate-item-title">Курс RUB</div>
+                            <div class="rate-item-value" data-value="RUB">--.--</div>
+                            <div class="rate-item-footer">Российские рубли</div>
+                        </div>
+                    </div>                        
+                </div>
+
+                <div class="page" id="right-page">
+                    <div class="translator">
+                        <fieldset>
+                        <legend>Входная валюта</legend>
+                            <label for="input-sum">Сумма:</label>
+                            <input id="input-number" type="number" class="form-control" id="name" autofocus />                    
+                            <br><label for="input-name">Отдаю:</label>
+                            <select id="input-select" class="form-control">
+                                
+                                <option value="USD" selected>USD — Доллар США</option>
+                                <option value="EUR">EUR — Евро</option>
+                                <option value="GBP">GPB — Фунт стерлингов</option>
+                                <option value="JPY">JPY — Японские иены</option>
+                                <option value="CNY">CNY — Китайские юани</option>
+                                <option value="PLN">PLN — Польские злотые</option>
+                                <option value="BYN">BYN — Белорусские рубли</option>
+                                <option value="UAH">UAH — Украинские гривны</option>
+                                <option value="RUB">RUB — Российские рубли</option>
+                            </select>
+                        </fieldset>
+
+                        <fieldset>
+                        <legend>Выходная валюта</legend>
+                            <label for="output-sum1">Сумма:</label>
+                            <input id="output-number1" type="number" class="form-control" id="name" />                         
+                            <br><label for="output-name1">В валюте:</label>
+                            <select id="output-select1" class="form-control">
+                                <option value="USD">USD — Доллар США</option>
+                                <option value="EUR" selected>EUR — Евро</option>
+                                <option value="GBP">GPB — Фунт стерлингов</option>
+                                <option value="JPY">JPY — Японские иены</option>
+                                <option value="CNY">CNY — Китайские юани</option>
+                                <option value="PLN">PLN — Польские злотые</option>
+                                <option value="BYN">BYN — Белорусские рубли</option>
+                                <option value="UAH">UAH — Украинские гривны</option>
+                                <option value="RUB">RUB — Российские рубли</option>
+                            </select>
+
+                            <br><br><label for="output-sum2">Сумма:</label>
+                            <input id="output-number2" type="number" class="form-control" id="name" />                        
+                            <br><label for="output-name2">В валюте:</label>
+                            <select id="output-select2" class="form-control">
+                                <option value="USD">USD — Доллар США</option>
+                                <option value="EUR">EUR — Евро</option>
+                                <option value="GBP">GPB — Фунт стерлингов</option>
+                                <option value="JPY">JPY — Японские иены</option>
+                                <option value="CNY">CNY — Китайские юани</option>
+                                <option value="PLN">PLN — Польские злотые</option>
+                                <option value="BYN" selected>BYN — Белорусские рубли</option>
+                                <option value="UAH">UAH — Украинские гривны</option>
+                                <option value="RUB">RUB — Российские рубли</option>
+                            </select>
+
+                            <br><br><label for="output-sum3">Сумма:</label>
+                            <input id="output-number3" type="number" class="form-control" id="name" />                            
+                            <br><label for="output-name3">В валюте:</label>
+                            <select id="output-select3" class="form-control">
+                                <option value="USD">USD — Доллар США</option>
+                                <option value="EUR">EUR — Евро</option>
+                                <option value="GBP">GPB — Фунт стерлингов</option>
+                                <option value="JPY">JPY — Японские иены</option>
+                                <option value="CNY">CNY — Китайские юани</option>
+                                <option value="PLN">PLN — Польские злотые</option>
+                                <option value="BYN">BYN — Белорусские рубли</option>
+                                <option value="UAH" selected>UAH — Украинские гривны</option>
+                                <option value="RUB">RUB — Российские рубли</option>
+                            </select>
+                        </fieldset>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+    <img id="villager" src="./img/cut-villager.png" alt="Кто-то смотрит за тобой">
+
+    <script src="./script.js"></script>
+</body>
+</html>
